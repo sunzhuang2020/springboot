@@ -1,0 +1,9 @@
+#web.upload-path=G:\\360downloads\\wpcache\\srvsetwp
+
+
+#spring.mvc.static-path-pattern=/**
+#配置静态资源映射路径  在配置静态资源映射路径时不写默认的 就代表覆盖掉默认的静态资源映射路径classpath:/resources/,\
+#  classpath:/static/,classpath:/public/
+#spring.resources.static-locations=classpath:/resources/,\
+ # classpath:/static/,classpath:/public/,file:${web.upload-path}
+server.port=8889

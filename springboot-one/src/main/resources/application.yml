@@ -1,0 +1,7 @@
+#spring 公司推荐使用yml结尾的配置   所以先加载以yml结尾的配置文件 在加载 properties   的配置文件  后者会覆盖前者
+#springboot yml结尾的配置文件支持多环境切换
+spring:
+  profiles:
+    active: abc
+
+    #不需要切换的配置文件陪在主配置文件 也就是控制切换的配置文件

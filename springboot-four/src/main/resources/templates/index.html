@@ -1,0 +1,37 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<!--<h1 th:text="${message}"></h1></br>
+<span th:text="${user.id}"></span></br>
+<span th:text="${user.age}"></span></br>
+<span th:text="${user.name}"></span></br>
+<img th:src="${src.src1}"/></br>
+<img th:src="${src.src2}"/>-->
+<table  width="200" style="text-align: center;" border="1">
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>索引</th>
+      <!--  <th>index</th>-->
+    </tr>
+<tr th:each="user,iterStat: ${userList}" th:style="${iterStat.even?'background: red':''}"  style="">
+    <td  th:text="${user.id}"></td>
+    <td  th:text="${user.name}"></td>
+    <td  th:text="${user.age}"></td>
+    <td th:text="${iterStat.index}"></td>
+</tr>
+    <!--把片段的内容插入到当前位置-->
+<div th:insert="~{footer::copy}"></div>
+    <!--片段内容替换当前主标题-->
+    <div th:replace="~{footer::copy}"></div>
+    <!--保留当前主标题，不要片段主标题-->
+    <div th:include="~{footer::copy}"></div>
+</table>
+</body>
+</html>

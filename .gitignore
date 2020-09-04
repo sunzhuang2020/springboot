@@ -1,0 +1,6 @@
+# Project exclude paths
+/spring-three/target/
+/springboot-four/target/
+/springBoot-JPA/target/
+/springboot-one/target/
+/springboot-two/target/
